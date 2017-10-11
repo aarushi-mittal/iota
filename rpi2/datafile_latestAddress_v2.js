@@ -29,7 +29,7 @@
 
     console.log("iota js version is : " + iotajs.version);
 
-    //check for new transactions every 60 seconds
+    //check for new transactions every 30 seconds
     var intervalFunction = setInterval(function () {
         iotajs.api.getAccountData(IOTA_SEED2, function (error, myObject) {
             if (error) {
@@ -43,11 +43,11 @@
                 msg = msg.replace("9", "   ");
                 msg = msg.split(" ")[0];
                 (categorizedTransfers.received[curr_address_index])[0].signatureMessageFragment = msg;
-                console.log("categorized transfers are : " + JSON.stringify((categorizedTransfers.received[curr_address_index])[0]));
+                console.log("MESSAGE TRANSFERRED TO INDEX : "+curr_address_index+ " IN TRYTES IS : " + JSON.stringify((categorizedTransfers.received[curr_address_index])[0].signatureMessageFragment));
 
 
             }
         });
 
 
-    }, 5000);
+    }, 30000);
