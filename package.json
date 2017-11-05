@@ -1,0 +1,16 @@
+{
+  "name": "chris",
+  "version": "1.0.0",
+  "description": "mam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aarushi Mittal",
+  "license": "ISC",
+  "dependencies": {
+    "iota.lib.js": "^0.4.2",
+    "level": "^2.0.0",
+    "mam.client.js": "git+https://github.com/l3wi/mam.client.js.git"
+  }
+}
